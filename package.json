@@ -12,6 +12,6 @@
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
-  "author": "",
+  "author": "q19project@gmail.com",
   "license": "ISC"
 }

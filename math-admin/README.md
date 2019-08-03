@@ -35,3 +35,5 @@ swapon /PATH/TO/SWAPFILE
 ```
 
 完事之后用```free -m```看下是否的确有增加了。
+
+查看系统swap文件使用```swapon -s```命令即可。

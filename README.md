@@ -28,3 +28,18 @@ pm2 start --name math-docs npm -- run dev
 ```
 
 当然正式上线之后可以通过webhook的方式，push即build
+
+# https证书
+
+因为我们的vuepress是跑在nginx服务里后面的，通过proxy_pass的方式。
+所以直接letsencrypt会报错。需要先加一个配置
+```conf
+/.well-known/ {
+    /PATH/TO/YOUR/PROJECT/.well-known/;
+}
+```
+然后运行
+```shell
+letsencrypt
+```
+命令获取免费3个月的证书，即可。(别忘了在你项目的目录新建一个.well-known目录)
